@@ -39,7 +39,7 @@ The original HR dataset (`HR-Employee-Attrition.csv`) consisted of over 1,400 un
 - `work_history`
 - `company_benefits`
 
-Please view  for the full diagram.
+![Entity Relationship Diagram](https://github.com/KritiCParikh/IBM-HR-Analytics-Accelerator/blob/main/IBM_HR_ERD.jpg?raw=true)
 
 ---
 
