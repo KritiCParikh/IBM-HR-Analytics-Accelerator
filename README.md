@@ -14,7 +14,7 @@ The original HR dataset (`HR-Employee-Attrition.csv`) consisted of over 1,400 un
 
 ---
 
-## 🛠️ What I Built
+## What I Built
 
 | Task | Details |
 |------|---------|
@@ -22,14 +22,14 @@ The original HR dataset (`HR-Employee-Attrition.csv`) consisted of over 1,400 un
 | **Data Modeling** | Designed a relational schema to reflect real-world HR structure |
 | **ER Diagram** | Visualized all tables and relationships with PK-FK integrity |
 | **Indexing Strategy** | Indexed key columns (`EmployeeNumber`, `JobRole`, `PerformanceRating`) to optimize joins |
-| **Partitioning** | Partitioned the `Wages` table by salary range for efficient compensation queries |
+| **Partitioning** | Simulated partitioning of Wages by salary bands to improve compensation queries |
 | **CTEs & Window Functions** | Used CTEs for query modularity and layered analytics, and window functions like `RANK()` and `AVG() OVER()` to analyze pay gaps, rank employees by income within roles, and compare satisfaction scores across departments |
 | **Query Optimization** | Rewrote complex joins, added filters early, removed subqueries |
 | **Business Logic Queries** | Created analytics queries to evaluate gender pay gaps, attrition trends, travel frequency, and performance distribution |
 
 ---
 
-## 🧾 Schema Overview (8 Tables)
+## Schema Overview (8 Tables)
 - `employee_demographics`
 - `employee_education`
 - `jobrole`
@@ -50,43 +50,32 @@ The original HR dataset (`HR-Employee-Attrition.csv`) consisted of over 1,400 un
 
 ---
 
-## 📁 Files in This Repo
+## Future Enhancements
 
-| File/Folder | Description |
-|-------------|-------------|
-| `HR-Employee-Attrition.csv` | Cleaned original dataset |
-| `IBM_Attrition_DB.sql` | Full DDL with table creation and constraints |
-| `IBM_HR_ERD.jpg` | Entity-Relationship Diagram (ERD) |
+### Connect to BI Tools
+Link the database to a visualization tool to build live dashboards, including:
+- Attrition heatmaps  
+- Retention trends by age or role  
+- Salary comparisons across education levels  
 
----
+### Make the Database Portable with Docker
+Package the SQL database in a Docker container so others can spin it up easily without manual setup.
 
-## 🚀 Future Enhancements
+### Try a Star Schema (Optional)
+Reshape the current relational structure into a dimensional star schema with fact and dimension tables for optimized reporting.
 
-1. **Add Sample Queries File**
-   - Provide SQL scripts for real-world HR use cases:  
-     `avg salary by role`, `attrition by department`, `promotion vs performance`.
+### Build Lightweight API Endpoints (Stretch Goal)
+Use Flask or FastAPI to serve selected HR metrics and analytics through internal APIs or dashboards.
 
-2. **Integrate with BI Tools**
-   - Connect database to Tableau or Power BI for live dashboards:  
-     `Attrition heatmap`, `Retention trends`, `Salary breakdown`.
+### Predict Attrition Using Machine Learning
+Feed the cleaned, structured data into ML models such as Logistic Regression or XGBoost to identify employees at higher risk of leaving.
 
-3. **Deploy via Docker**
-   - Containerize the SQL database for easy reproducibility and sharing.
+### Make It Interactive
+Deploy an interactive interface using tools like Streamlit or Flask so HR teams can:
+- Get real-time attrition predictions  
+- Explore key drivers with SHAP for model explainability  
+- Navigate salary or satisfaction trends through dynamic dashboards  
 
-4. **Convert to Star Schema (Optional)**
-   - Create a dimensional model optimized for HR data warehousing.
+--
 
-5. **Build API Endpoints (Stretch Goal)**
-   - Use Flask or FastAPI to serve HR insights via an internal dashboard.
-
-6. **Attrition Prediction Pipeline**
-   - Use this cleaned and relational data to power predictive models (Logistic Regression, XGBoost).
-
-7. - Deploy model with Streamlit or Flask for HR team to interact with
-- Add SHAP visualizations for model interpretability
-- Create dashboards with Tableau or Power BI
-
----
-
-## 📜 License
-MIT License
+Thank You. Let’s keep learning and growing together!
